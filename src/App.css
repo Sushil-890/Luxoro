@@ -49,17 +49,19 @@ body {
 
 .category-cards {
   display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 20px;
-    justify-content: space-around;
-    gap: 10px;
-    background-color: #FAFAFA;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: space-around;
+  gap: 10px;
+  background-color: #FAFAFA;
 }
-img{
+
+img {
   width: 200px;
   height: 200px;
 }
+
 .card {
   background-color: white;
   border: 1px solid #ddd;
@@ -74,7 +76,7 @@ img{
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgb(214, 154, 164)
+  border: 1px solid rgb(214, 154, 164);
 }
 
 /* Footer */
@@ -90,6 +92,7 @@ img{
   justify-content: center;
   gap: 50px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .footer-links h3 {
@@ -119,4 +122,61 @@ img{
 .footer-bottom {
   border-top: 1px solid gray;
   padding-top: 10px;
+}
+
+/* ------------------- */
+/* Responsive Design   */
+/* ------------------- */
+
+/* Tablets (768px and down) */
+@media (max-width: 768px) {
+  .banner h1 {
+    font-size: 28px;
+  }
+
+  .banner p {
+    font-size: 16px;
+  }
+
+  .category-cards {
+    justify-content: center;
+  }
+
+  .card {
+    width: 180px;
+    padding: 15px;
+  }
+
+  img {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/* Mobile (480px and down) */
+@media (max-width: 480px) {
+  .banner h1 {
+    font-size: 22px;
+  }
+
+  .banner p {
+    font-size: 14px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 }
